@@ -1,8 +1,8 @@
 # Shelve it
+[![Java CI with Gradle](https://github.com/Cheeseborgers/shelve-it/actions/workflows/gradle.yml/badge.svg?branch=main)](https://github.com/Cheeseborgers/shelve-it/actions/workflows/gradle.yml?branch=main)
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg"></a>
 
-<p align="left">
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg"></a>
-</p>
+
 
 ## Links
 - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/shelve-it)
