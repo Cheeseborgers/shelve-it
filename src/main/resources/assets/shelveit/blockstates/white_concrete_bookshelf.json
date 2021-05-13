@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "number_of_books=0": {"model": "shelveit:block/white_concrete_bookshelf"},
+    "number_of_books=1": {"model": "shelveit:block/white_concrete_bookshelf"}
+  }
+}

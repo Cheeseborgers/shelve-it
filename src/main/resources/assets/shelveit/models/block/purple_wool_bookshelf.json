@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraft:block/purple_wool",
+    "side": "shelveit:block/purple_wool_bookshelf"
+  }
+}

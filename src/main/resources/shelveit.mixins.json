@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.gcb.shelveit.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "EnchantmentScreenHandlerMixin",
+    "EnchantmentTableParticleMixin"
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

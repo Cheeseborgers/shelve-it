@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraft:block/pink_concrete",
+    "side": "shelveit:block/pink_concrete_bookshelf"
+  }
+}
