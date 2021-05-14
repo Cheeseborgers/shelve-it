@@ -27,8 +27,3 @@ but also can be used for storage
 - Q: Will you (back-)port this to Forge?
 - A: No. But you can!!
 
-## License
-
-* Shelve-it (c) 2021 Goode_Cheeseburgers 
-  - [![License](https://img.shields.io/badge/License-MIT-red.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-
