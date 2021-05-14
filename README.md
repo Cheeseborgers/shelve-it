@@ -2,7 +2,7 @@
 [![Java CI with Gradle](https://github.com/Cheeseborgers/shelve-it/actions/workflows/gradle.yml/badge.svg?branch=main)](https://github.com/Cheeseborgers/shelve-it/actions/workflows/gradle.yml?branch=main)
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg"></a>
 
-
+**WARNING - _NOT YET COMPLETELY FUNCTIONAL!_**
 
 ## Links
 - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/shelve-it)
@@ -19,8 +19,8 @@ but also can be used for storage
 
 ## Missing Features / Known Issues
 
-- Shelves can currently store any item (books only in future) 
-- Missing textures and logic for texture change (dependent on container capacity)
+- Shelves can currently store any item (books only in future) (90% done)
+- Missing textures and logic for texture change (dependent on container capacity) (50% done)
 
 ## FAQ
 
