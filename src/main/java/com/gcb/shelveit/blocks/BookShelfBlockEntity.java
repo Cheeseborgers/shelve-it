@@ -83,7 +83,7 @@ public class BookShelfBlockEntity extends BlockEntity implements NamedScreenHand
             this.world.addSyncedBlockEvent(this.pos, this.getCachedState().getBlock(), 1, this.viewerCount);
 
             if(this.viewerCount == 1) {
-                this.world.playSound((PlayerEntity)null, this.pos, SoundEvents.ITEM_BOOK_PAGE_TURN,
+                this.world.playSound(null, this.pos, SoundEvents.ITEM_BOOK_PAGE_TURN,
                         SoundCategory.BLOCKS, 0.5F, this.world.random.nextFloat() * 0.1F + 0.9F);
             }
 
@@ -99,7 +99,8 @@ public class BookShelfBlockEntity extends BlockEntity implements NamedScreenHand
             assert this.world != null;
             this.world.addSyncedBlockEvent(this.pos, this.getCachedState().getBlock(), 1, this.viewerCount);
             if (this.viewerCount <= 0) {
-                this.world.playSound((PlayerEntity)null, this.pos, SoundEvents.ITEM_BOOK_PUT, SoundCategory.BLOCKS, 0.5F, this.world.random.nextFloat() * 0.1F + 0.9F);
+                this.world.playSound(null, this.pos, SoundEvents.ITEM_BOOK_PUT,
+                        SoundCategory.BLOCKS, 0.5F, this.world.random.nextFloat() * 0.1F + 0.9F);
             }
 
             // Update the BlockStates
@@ -115,7 +116,6 @@ public class BookShelfBlockEntity extends BlockEntity implements NamedScreenHand
         if (block instanceof BookShelfBlock) {
             assert this.world != null;
             world.setBlockState(pos, this.getCachedState().with(BookShelfBlock.NUMBER_OF_BOOKS, this.slotsInUse()));
-            System.out.println(this.getCachedState());
         }
     }
 }
