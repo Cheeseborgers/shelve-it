@@ -1,16 +1,14 @@
 package com.gcb.shelveit;
 
-import com.gcb.shelveit.blocks.BookShelf;
 import com.gcb.shelveit.blocks.BookShelfBlock;
 import com.gcb.shelveit.blocks.BookShelfBlockEntity;
-
+import com.gcb.shelveit.blocks.BookShelfProperties;
 import com.gcb.shelveit.screenhandlers.BookShelfScreenHandler;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -48,13 +46,13 @@ public class ShelveIt implements ModInitializer {
 
 		System.out.println(MODID + " Is loaded!");
 
-		ArrayList<BookShelf> list = new ArrayList<>();
+		ArrayList<BookShelfProperties> list = new ArrayList<>();
 
 		//Add our shelves to the ArrayList
-		list.add(new BookShelf("white_concrete", false, 300, 30, 20,AbstractBlock.Settings.copy(Blocks.WHITE_CONCRETE)));
+		list.add(new BookShelfProperties("white_concrete", false, 300, 30, 20,AbstractBlock.Settings.copy(Blocks.WHITE_CONCRETE)));
 
-		for (BookShelf shelf : list) {
-			BookShelfBlock bookshelf = new BookShelfBlock(shelf.settings);
+		for (BookShelfProperties shelf : list) {
+			BookShelfBlock bookshelf = new BookShelfBlock(shelf.settings, true);
 			BOOKSHELF_ID = new Identifier(MODID, String.format("%s_bookshelf", shelf.name));
 
 			//Block ---------------------------------------------------------------------------------------------------

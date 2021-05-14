@@ -1,9 +1,6 @@
 package com.gcb.shelveit.screenhandlers;
 
 import com.gcb.shelveit.ShelveIt;
-import net.minecraft.block.Blocks;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -11,10 +8,6 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
-import net.minecraft.util.registry.Registry;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
 
 
 public class BookShelfScreenHandler extends ScreenHandler {

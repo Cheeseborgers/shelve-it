@@ -2,7 +2,7 @@ package com.gcb.shelveit.mixin;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.screen.*;
+import net.minecraft.screen.EnchantmentScreenHandler;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;

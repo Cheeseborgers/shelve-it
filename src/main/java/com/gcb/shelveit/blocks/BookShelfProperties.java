@@ -2,7 +2,7 @@ package com.gcb.shelveit.blocks;
 
 import net.minecraft.block.AbstractBlock;
 
-public class BookShelf {
+public class BookShelfProperties {
 
         public final String name;
         public final boolean flammable;
@@ -11,7 +11,7 @@ public class BookShelf {
         public final int spread;
         public final AbstractBlock.Settings settings;
 
-        public BookShelf(String name, boolean flammable, int fuelValue, int burnTime, int spread, AbstractBlock.Settings settings) {
+        public BookShelfProperties(String name, boolean flammable, int fuelValue, int burnTime, int spread, AbstractBlock.Settings settings) {
                 this.name = name;
                 this.flammable = flammable;
                 this.fuelValue = fuelValue;
