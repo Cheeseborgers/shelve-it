@@ -1,6 +1,9 @@
 package com.gcb.shelveit.blocks;
 
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockRenderType;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
@@ -20,17 +23,18 @@ import net.minecraft.world.World;
 public class BookShelfBlock extends BlockWithEntity{
 
     public static final IntProperty NUMBER_OF_BOOKS = IntProperty.of("number_of_books", 0, 27);
+    public boolean DisplayShelfContents = true;
 
-    public BookShelfBlock(Settings settings) {
+    public BookShelfBlock(Settings settings, Boolean displayShelfContents) {
         super(settings);
         setDefaultState(getStateManager().getDefaultState().with(NUMBER_OF_BOOKS, 0));
+        this.DisplayShelfContents = displayShelfContents;
     }
 
     @Override
     public BlockEntity createBlockEntity(BlockView world) {
         return new BookShelfBlockEntity();
     }
-
 
     @Override
     public BlockRenderType getRenderType(BlockState state) {
