@@ -6,6 +6,7 @@ import com.gcb.shelveit.blocks.BookShelfBlockEntity;
 
 import com.gcb.shelveit.screenhandlers.BookShelfScreenHandler;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -15,6 +16,7 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -65,6 +67,8 @@ public class ShelveIt implements ModInitializer {
 					BlockEntityType.Builder.create(BookShelfBlockEntity::new, bookshelf).build(null));
 			//Block Screen handler ------------------------------------------------------------------------------------
 			BOOKSHELF_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(BOOKSHELF_ID, BookShelfScreenHandler::new);
+
+			BlockRenderLayerMap.INSTANCE.putBlock(BOOKSHELF_BLOCK, RenderLayer.getTranslucent());
 
 			if (shelf.flammable)
 			{
