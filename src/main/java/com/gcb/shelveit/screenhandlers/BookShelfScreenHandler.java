@@ -38,7 +38,6 @@ public class BookShelfScreenHandler extends ScreenHandler {
         //some inventories do custom logic when a player opens it.
         inventory.onOpen(playerInventory.player);
 
-
         //This will place the slot in the correct locations for a 9x3 Grid. The slots exist on both server and client!
         //This will not render the background of the slots however, this is the Screens job
         int m;
@@ -75,28 +74,21 @@ public class BookShelfScreenHandler extends ScreenHandler {
         ItemStack newStack = ItemStack.EMPTY;
         Slot slot = this.slots.get(invSlot);
         if (slot != null && slot.hasStack()) {
-            System.out.println("Meh 1");
             // Ge the item stack
             ItemStack originalStack = slot.getStack();
-            System.out.println(originalStack);
             newStack = originalStack.copy();
             slot.onStackChanged(originalStack, newStack);
             if (invSlot < this.inventory.size()) {
-                System.out.println("Meh 2");
                 if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) {
-                    System.out.println("Meh 2 a");
                     return ItemStack.EMPTY;
                 }
             } else if (!this.insertItem(originalStack, 0, this.inventory.size(), false)) {
-                System.out.println("Meh 3");
                 return ItemStack.EMPTY;
             }
 
             if (originalStack.isEmpty()) {
-                System.out.println("Meh 4 a");
                 slot.setStack(ItemStack.EMPTY);
             } else {
-                System.out.println("Meh 4 b");
                 slot.markDirty();
             }
         }
@@ -112,7 +104,6 @@ public class BookShelfScreenHandler extends ScreenHandler {
 
     @Override
     public void onContentChanged(Inventory inventory) {
-        System.out.println("ahhhhhhhhhhh");
         if (inventory == this.inventory) {
             ItemStack itemStack = inventory.getStack(0);
             System.out.println(itemStack);
