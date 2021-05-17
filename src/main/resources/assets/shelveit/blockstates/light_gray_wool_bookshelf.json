@@ -1,7 +1,88 @@
 {
-  "variants": {
-    "": {
-      "model": "shelveit:block/light_gray_wool_bookshelf"
+    "variants": {
+        "number_of_books=0": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_0"
+        },
+        "number_of_books=1": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_1"
+        },
+        "number_of_books=2": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_2"
+        },
+        "number_of_books=3": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_3"
+        },
+        "number_of_books=4": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_4"
+        },
+        "number_of_books=5": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_5"
+        },
+        "number_of_books=6": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_6"
+        },
+        "number_of_books=7": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_7"
+        },
+        "number_of_books=8": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_8"
+        },
+        "number_of_books=9": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_9"
+        },
+        "number_of_books=10": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_10"
+        },
+        "number_of_books=11": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_11"
+        },
+        "number_of_books=12": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_12"
+        },
+        "number_of_books=13": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_13"
+        },
+        "number_of_books=14": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_14"
+        },
+        "number_of_books=15": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_15"
+        },
+        "number_of_books=16": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_16"
+        },
+        "number_of_books=17": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_17"
+        },
+        "number_of_books=18": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_18"
+        },
+        "number_of_books=19": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_19"
+        },
+        "number_of_books=20": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_20"
+        },
+        "number_of_books=21": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_21"
+        },
+        "number_of_books=22": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_22"
+        },
+        "number_of_books=23": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_23"
+        },
+        "number_of_books=24": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_24"
+        },
+        "number_of_books=25": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_25"
+        },
+        "number_of_books=26": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_26"
+        },
+        "number_of_books=27": {
+            "model": "shelveit:block/light_gray_wool_bookshelf_27"
+        }
     }
-  }
 }

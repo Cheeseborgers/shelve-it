@@ -3,7 +3,8 @@ package com.gcb.shelveit;
 import com.gcb.shelveit.blocks.BookShelfBlock;
 import com.gcb.shelveit.blocks.BookShelfBlockEntity;
 import com.gcb.shelveit.blocks.BookShelfProperties;
-import com.gcb.shelveit.screenhandlers.BookShelfScreenHandler;
+import com.gcb.shelveit.screen.BookShelfScreenHandler;
+import com.gcb.shelveit.screen.BookShelfSlot;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -30,6 +31,10 @@ public class ShelveIt implements ModInitializer {
 	public static final String MODID = "shelveit";
 	public static final String PATH = "bookshelves";
 
+	//Config
+	public static final Boolean BOOK_ITEMS_ONLY = true;
+	public static final Boolean WOOL_SHELVES_BURN = true;
+
 	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
 			new Identifier(MODID, PATH),
 			() -> new ItemStack(Blocks.BOOKSHELF));
@@ -49,7 +54,59 @@ public class ShelveIt implements ModInitializer {
 		ArrayList<BookShelfProperties> list = new ArrayList<>();
 
 		//Add our shelves to the ArrayList
-		list.add(new BookShelfProperties("white_concrete", false, 300, 30, 20,AbstractBlock.Settings.copy(Blocks.WHITE_CONCRETE)));
+		list.add(new BookShelfProperties("white_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.WHITE_CONCRETE)));
+		list.add(new BookShelfProperties("black_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.BLACK_CONCRETE)));
+		list.add(new BookShelfProperties("blue_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.BLUE_CONCRETE)));
+		list.add(new BookShelfProperties("brown_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.BROWN_CONCRETE)));
+		list.add(new BookShelfProperties("cyan_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.CYAN_CONCRETE)));
+		list.add(new BookShelfProperties("gray_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.GRAY_CONCRETE)));
+		list.add(new BookShelfProperties("green_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.GREEN_CONCRETE)));
+		list.add(new BookShelfProperties("light_blue_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_CONCRETE)));
+		list.add(new BookShelfProperties("light_gray_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_CONCRETE)));
+		list.add(new BookShelfProperties("lime_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.LIME_CONCRETE)));
+		list.add(new BookShelfProperties("magenta_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.MAGENTA_CONCRETE)));
+		list.add(new BookShelfProperties("orange_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.ORANGE_CONCRETE)));
+		list.add(new BookShelfProperties("pink_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.PINK_CONCRETE)));
+		list.add(new BookShelfProperties("purple_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.PURPLE_CONCRETE)));
+		list.add(new BookShelfProperties("red_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.RED_CONCRETE)));
+		list.add(new BookShelfProperties("yellow_concrete", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.YELLOW_CONCRETE)));
+
+
+		list.add(new BookShelfProperties("terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.TERRACOTTA)));
+		list.add(new BookShelfProperties("white_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.WHITE_TERRACOTTA)));
+		list.add(new BookShelfProperties("black_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.BLACK_TERRACOTTA)));
+		list.add(new BookShelfProperties("blue_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.BLUE_TERRACOTTA)));
+		list.add(new BookShelfProperties("brown_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.BROWN_TERRACOTTA)));
+		list.add(new BookShelfProperties("cyan_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.CYAN_TERRACOTTA)));
+		list.add(new BookShelfProperties("gray_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.GRAY_TERRACOTTA)));
+		list.add(new BookShelfProperties("green_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.GREEN_TERRACOTTA)));
+		list.add(new BookShelfProperties("light_blue_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_TERRACOTTA)));
+		list.add(new BookShelfProperties("light_gray_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_TERRACOTTA)));
+		list.add(new BookShelfProperties("lime_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.LIME_TERRACOTTA)));
+		list.add(new BookShelfProperties("magenta_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.MAGENTA_TERRACOTTA)));
+		list.add(new BookShelfProperties("orange_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.ORANGE_TERRACOTTA)));
+		list.add(new BookShelfProperties("pink_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.PINK_TERRACOTTA)));
+		list.add(new BookShelfProperties("purple_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.PURPLE_TERRACOTTA)));
+		list.add(new BookShelfProperties("red_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.RED_TERRACOTTA)));
+		list.add(new BookShelfProperties("yellow_terracotta", false, 0, 30, 20,AbstractBlock.Settings.copy(Blocks.YELLOW_TERRACOTTA)));
+
+
+		list.add(new BookShelfProperties("white_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.WHITE_WOOL)));
+		list.add(new BookShelfProperties("black_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.BLACK_WOOL)));
+		list.add(new BookShelfProperties("blue_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.BLUE_WOOL)));
+		list.add(new BookShelfProperties("brown_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.BROWN_WOOL)));
+		list.add(new BookShelfProperties("cyan_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.CYAN_WOOL)));
+		list.add(new BookShelfProperties("gray_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.GRAY_WOOL)));
+		list.add(new BookShelfProperties("green_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.GREEN_WOOL)));
+		list.add(new BookShelfProperties("light_blue_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_WOOL)));
+		list.add(new BookShelfProperties("light_gray_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_WOOL)));
+		list.add(new BookShelfProperties("lime_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.LIME_WOOL)));
+		list.add(new BookShelfProperties("magenta_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.MAGENTA_WOOL)));
+		list.add(new BookShelfProperties("orange_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.ORANGE_WOOL)));
+		list.add(new BookShelfProperties("pink_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.PINK_WOOL)));
+		list.add(new BookShelfProperties("purple_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.PURPLE_WOOL)));
+		list.add(new BookShelfProperties("red_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.RED_WOOL)));
+		list.add(new BookShelfProperties("yellow_wool", WOOL_SHELVES_BURN, 100, 30, 60,AbstractBlock.Settings.copy(Blocks.YELLOW_WOOL)));
 
 		for (BookShelfProperties shelf : list) {
 			BookShelfBlock bookshelf = new BookShelfBlock(shelf.settings, true);

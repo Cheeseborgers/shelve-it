@@ -2,7 +2,7 @@ package com.gcb.shelveit.blocks;
 
 
 import com.gcb.shelveit.ShelveIt;
-import com.gcb.shelveit.screenhandlers.BookShelfScreenHandler;
+import com.gcb.shelveit.screen.BookShelfScreenHandler;
 import com.gcb.shelveit.utils.ImplementedInventory;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

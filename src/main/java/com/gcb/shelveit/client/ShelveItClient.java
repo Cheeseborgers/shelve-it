@@ -1,7 +1,7 @@
 package com.gcb.shelveit.client;
 
 import com.gcb.shelveit.ShelveIt;
-import com.gcb.shelveit.screenhandlers.BookShelfScreen;
+import com.gcb.shelveit.screen.BookShelfScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
